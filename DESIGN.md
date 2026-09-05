@@ -100,7 +100,7 @@ Both marks use simple geometry, one color accent, and no shield silhouette.
 ## Content rules
 
 - Lead with the protected result, not the mechanism.
-- State the product promise as `Control what agents and workloads can do`.
+- State the product promise as `Stop AI agents before they do harm`.
 - Keep AI-agent attacks as the primary threat and buyer motivation.
 - State that Araphor can protect an agent, a workload, or both.
 - Name the harm: secret access, process execution, or a forbidden connection.
@@ -148,6 +148,7 @@ Both marks use simple geometry, one color accent, and no shield silhouette.
 | 2026-09-05 | Use the system-boundary category; superseded later on 2026-09-05 | The phrase identified the protected layer, but it did not explain the agent-and-workload product clearly enough. |
 | 2026-09-05 | Make human approval explicit in the first screen | The copy now separates observation, policy proposal, approval, and enforcement. |
 | 2026-09-05 | Present agent and workload protection as one product | Araphor controls actions at the execution boundary. Agent context can improve policy, but workload enforcement does not require agent attribution. |
+| 2026-09-05 | Restore the outcome-led hero promise | `Stop AI agents before they do harm` states the customer result. The supporting copy explains agent and workload coverage. |
 
 ## Acquisition references
 

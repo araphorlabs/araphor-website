@@ -28,7 +28,7 @@ URL is configured.
   -> [console captures](assets/product) the product views show the Araphor console brand
   -> [canonical URL](index.html) search and social metadata identify `https://araphor.com/` as the primary website
 
-[hero message](index.html) The visitor sees Araphor as protection against AI-agent attacks
+[hero message](index.html) The visitor sees that Araphor stops AI agents before they do harm
   -> [product scope](index.html) the page states that Araphor controls agents and workloads
   -> [adoption summary](index.html) the page separates Observe, Suggest, Approve, and Protect
   -> [policy statement](index.html) the page states that enforcement starts only after policy approval
@@ -96,11 +96,12 @@ URL is configured.
 
 ## Verification
 
-The review covers the filesystem state on 2026-09-05. The `.gstack` directory
-is ignored by the main repository.
+The review covers the website working tree on 2026-09-05. The website is an
+independent Git repository. The parent repository ignores the `.gstack`
+directory.
 
 - `npm run check` completed the JavaScript syntax check and the Vite 8.2.2 build.
-- Playwright read the AI-agent attack category, the agent-and-workload promise,
+- Playwright read the AI-agent attack category, the agent-and-workload scope,
   the Observe-to-Protect policy statement, and the 30-minute demo label from
   the rendered page.
 - Playwright showed the four operating facts in one row at 1440 pixels, two
@@ -109,8 +110,8 @@ is ignored by the main repository.
   captured the proof, deployment, and conversion sections at 1440 pixels.
 - `xmllint` accepted the favicon, logo, and color-theme SVG files.
 - A complete source and build scan found no previous product or company name in the website directory.
-- The browser read `Araphor | Control AI-agent actions before they cause harm`
-  as the page title.
+- The browser read `Araphor | Stop AI agents before they do harm` as the page
+  title.
 - The browser read `https://araphor.com/` as the canonical URL.
 - The browser found no old product or company name in the rendered page text.
 - The light forge-violet text pairing measured `6.04:1`. The dark pairing measured `8.56:1`.
