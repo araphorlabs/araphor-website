@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en" data-color-scheme="forged-silver-5">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Araphor contains AI agents and protects Linux and Kubernetes workloads by stopping forbidden actions before they take effect.">
+  <meta name="theme-color" content="#101512">
+  <meta property="og:title" content="Araphor | Control AI-agent actions before they cause harm">
+  <meta property="og:description" content="Contain AI agents and protect the systems they reach by stopping forbidden actions before they take effect.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://araphor.com/">
+  <link rel="canonical" href="https://araphor.com/">
+  <title>Araphor | Control AI-agent actions before they cause harm</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+Condensed:wght@500;600;700&amp;family=Source+Sans+3:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="color-schemes.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-theme="light">
+    <div class="shell nav-shell">
+      <a class="brand" href="#top" aria-label="Araphor home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M12 52 32 12l20 40M20 36h24"/>
+          <path class="brand-stop" d="M40 33h20v6H40z"/>
+        </svg>
+        <span class="brand-name">ARAPHOR</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span>Menu</span>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation">
+        <a href="#console">Product</a>
+        <a href="#protection">Protection</a>
+        <a href="#attack-lab">Incident replay</a>
+        <a href="#mechanism">How it works</a>
+        <a class="nav-cta" href="#early-access">Request early access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">Protection against AI-agent attacks</p>
+          <h1 id="hero-title" class="hero-title" data-pretext data-editable contenteditable="false">
+            Control what agents <span>and workloads can do.</span>
+          </h1>
+          <p class="hero-lede" data-pretext data-editable contenteditable="false">
+            Araphor contains AI agents and protects the systems they reach by
+            stopping forbidden actions before they take effect.
+          </p>
+          <p class="hero-detail" data-pretext data-editable contenteditable="false">
+            Start in Observe. Araphor suggests policy from real activity. You
+            approve it before Protect is enabled.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#early-access">Request early access</a>
+            <a class="button button-secondary" href="#book-demo" data-calcom>Book a 30-minute demo</a>
+          </div>
+        </div>
+
+        <a class="hero-product" href="#console" aria-label="View the Araphor workload protection console">
+          <span class="hero-product-bar"><i></i><b>ARAPHOR / WORKLOAD PROTECTION</b><em>OBSERVE</em></span>
+          <img src="assets/product/workload-protection.png" width="1440" height="900" alt="Araphor console with observed workloads and suggested protection policies">
+          <span class="hero-product-result"><b>POLICY READY</b><span>Review suggested controls before enforcement</span></span>
+        </a>
+
+        <dl class="hero-facts" aria-label="Araphor operating facts">
+          <div>
+            <dt>Observe</dt>
+            <dd>See actions without blocking</dd>
+          </div>
+          <div>
+            <dt>Suggest</dt>
+            <dd>Build policy from real activity</dd>
+          </div>
+          <div>
+            <dt>Approve</dt>
+            <dd>You decide what is allowed</dd>
+          </div>
+          <div>
+            <dt>Protect</dt>
+            <dd>Stop forbidden actions</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="attack-lab" class="attack-lab" aria-labelledby="attack-title">
+      <div class="shell">
+        <div class="section-heading inverse-heading">
+          <p class="eyebrow">A real agent intrusion · Hugging Face, 2026</p>
+          <div class="incident-heading-copy">
+            <h2 id="attack-title" data-pretext data-editable contenteditable="false">One intrusion.<br>Many places to stop it.</h2>
+            <p>Follow the published attack path. Switch on Araphor to see where the attack stops.</p>
+          </div>
+        </div>
+
+        <div class="hf-case-tabs" role="tablist" aria-label="Hugging Face protection examples">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-hf-case-tab="secrets"><span>01</span> Read secrets</button>
+          <button type="button" role="tab" aria-selected="false" data-hf-case-tab="shell"><span>02</span> Start a shell</button>
+          <button type="button" role="tab" aria-selected="false" data-hf-case-tab="root"><span>03</span> Reach node root</button>
+        </div>
+
+        <div class="incident-flow" data-hf-case="secrets" data-flow-state="idle" data-active-path="actual">
+          <div class="flow-toolbar">
+            <p><span class="actual-key">Published incident</span><span class="shadow-key">With Araphor</span></p>
+            <button type="button" class="path-toggle" role="switch" aria-checked="false" data-path-toggle><span>Without Araphor</span><i aria-hidden="true"></i><span>With Araphor</span></button>
+          </div>
+          <p class="flow-promise"><strong>The agent keeps trying. The boundary keeps holding.</strong></p>
+
+          <div class="flow-scroll" tabindex="0" aria-label="One attack graph with a shared action and two outcome branches. Scroll horizontally to inspect the complete graph.">
+            <div class="incident-dag" aria-live="polite">
+              <svg class="dag-edges" viewBox="0 0 1380 440" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <marker id="dag-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#82bed6" stroke-width="1.3"/></marker>
+                  <marker id="dag-araphor-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#b7a7c8" stroke-width="1.5"/></marker>
+                </defs>
+                <path class="actor-edge" d="M125 94 V165"/>
+                <path class="shared-edge" d="M210 220 H245"/>
+                <path class="shared-edge" d="M425 220 H460"/>
+                <path class="actual-branch-edge" d="M670 220 C710 220 715 135 760 135"/>
+                <path class="actual-branch-edge" d="M930 135 H965"/>
+                <path class="actual-branch-edge" d="M1135 135 H1170"/>
+                <path class="araphor-branch-edge" d="M670 220 C710 220 715 325 760 325"/>
+                <path class="araphor-branch-edge" d="M930 325 H965"/>
+              </svg>
+
+              <div class="graph-actor"><i></i><span>worker-a<small>production dataset worker</small></span></div>
+              <p class="dag-branch-label actual-branch-label">PUBLISHED INCIDENT</p>
+              <p class="dag-branch-label araphor-branch-label">ARAPHOR · PROTECT MODE</p>
+
+              <article class="dag-node graph-source">
+                <p><span>INPUT</span><time>PUBLISHED</time></p>
+                <h3 data-dag-source-title>Dataset input accepted</h3>
+                <code data-dag-source-code>14 valid HF credentials</code>
+                <strong><i></i> OBSERVED</strong>
+              </article>
+
+              <article class="dag-node graph-process">
+                <p><span>PROCESS</span><time>WORKER</time></p>
+                <h3 data-dag-process-title>Conversion worker active</h3>
+                <code data-dag-process-code>worker-a</code>
+                <strong><i></i> ACTIVE</strong>
+              </article>
+
+              <article class="dag-node graph-action">
+                <p><span data-dag-action-kind>FILE</span><time>REQUEST</time></p>
+                <h3 data-dag-action-title>Protected file open requested</h3>
+                <code data-dag-action-code>/proc/self/environ</code>
+                <strong><i></i> EFFECT REQUESTED</strong>
+              </article>
+
+              <article class="dag-node actual-gate">
+                <p><span data-dag-actual-gate-kind>FILE</span><time>WITHOUT</time></p>
+                <h3 data-dag-actual-gate-title>Request allowed</h3>
+                <code data-dag-actual-gate-code>FILE · SUCCEEDED</code>
+                <strong><i></i> CONTINUED</strong>
+              </article>
+
+              <article class="dag-node actual-result">
+                <p><span data-dag-actual-result-kind>EFFECT</span><time>ACTUAL</time></p>
+                <h3 data-dag-actual-result-title>Secrets returned as rows</h3>
+                <code data-dag-actual-result-code>HARM CONFIRMED</code>
+                <strong class="harm-status"><i></i> COMPLETED</strong>
+              </article>
+
+              <article class="dag-node actual-tail">
+                <p><span data-dag-actual-tail-kind>FOLLOW-ON</span><time>4.5 DAYS</time></p>
+                <h3 data-dag-actual-tail-title>Agent continues the intrusion</h3>
+                <code data-dag-actual-tail-code>17,600 recovered actions</code>
+                <strong class="harm-status"><i></i> INTRUSION CONTINUED</strong>
+              </article>
+
+              <article class="dag-node araphor-gate">
+                <p><span data-dag-araphor-gate-kind>FILE POLICY</span><time>PROTECT</time></p>
+                <h3 data-dag-araphor-gate-title>Policy denies file open</h3>
+                <code data-dag-araphor-gate-code>FILE · DENIED</code>
+                <strong class="deny-status"><i></i> PREVENTED</strong>
+              </article>
+
+              <article class="dag-node araphor-result">
+                <p><span data-dag-araphor-result-kind>EVIDENCE</span><time>VERIFIED</time></p>
+                <h3 data-dag-araphor-result-title>Secret remains unread</h3>
+                <code data-dag-araphor-result-code>0 bytes · worker healthy</code>
+                <strong class="safe-status"><i></i> NO EFFECT</strong>
+              </article>
+
+              <span class="flow-token" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="evidence-console">
+            <div class="console-bar">
+              <span>DECISION TRACE · <b data-trace-id>HF-009</b></span>
+              <span class="console-state"><i></i><b data-console-state>PUBLISHED PATH</b></span>
+            </div>
+            <ol class="console-lines" aria-live="polite">
+              <li><time data-trace-1-time>EVENT 01</time><code data-trace-1-kind>REQUEST</code><strong data-trace-1-value>/proc/self/environ</strong></li>
+              <li><time data-trace-2-time>EVENT 02</time><code data-trace-2-kind>DECISION</code><strong data-trace-2-value>FILE · SUCCEEDED</strong></li>
+              <li><time data-trace-3-time>EVENT 03</time><code data-trace-3-kind>EFFECT</code><strong data-trace-3-value>Secrets returned as rows</strong></li>
+              <li><time data-trace-4-time>EVENT 04</time><code data-trace-4-kind>FOLLOW-ON</code><strong data-trace-4-value>Agent continues the intrusion</strong></li>
+              <li class="console-result"><time data-trace-5-time>OUTCOME</time><code data-trace-5-kind>RECORDED</code><strong data-trace-5-value>17,600 recovered actions</strong></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="incident-sources">
+          <p>This replay follows the published Hugging Face timeline. <span data-flow-limit>The protected path first stops the HDF5 request for <code>/proc/self/environ</code>.</span></p>
+          <div><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank" rel="noreferrer">OpenAI incident report <span aria-hidden="true">↗</span></a><a href="https://huggingface.co/blog/agent-intrusion-technical-timeline" target="_blank" rel="noreferrer">Hugging Face technical timeline <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="console" class="product-section" aria-labelledby="product-title">
+      <div class="shell">
+        <div class="product-intro">
+          <p class="eyebrow">Product</p>
+          <h2 id="product-title" data-pretext data-editable contenteditable="false">Observe. Approve.<br>Protect.</h2>
+          <p>Araphor records actions from agents and workloads, suggests policy, and enforces only what you approve.</p>
+        </div>
+
+        <div class="product-tabs" role="tablist" aria-label="Araphor console views">
+          <button id="workloads-tab" class="product-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="workloads-panel" data-product-tab="workloads">
+            <span>01</span> Workload protection
+          </button>
+          <button id="replay-tab" class="product-tab" type="button" role="tab" aria-selected="false" aria-controls="replay-panel" data-product-tab="replay" tabindex="-1">
+            <span>02</span> Causal replay
+          </button>
+        </div>
+
+        <div class="product-panels">
+          <figure id="workloads-panel" class="product-panel" role="tabpanel" aria-labelledby="workloads-tab" data-product-panel="workloads">
+            <div class="product-window">
+              <div class="product-window-bar" aria-hidden="true">
+                <span><i></i><i></i><i></i></span>
+                <b>ARAPHOR / WORKLOAD PROTECTION</b>
+              </div>
+              <img src="assets/product/workload-protection.png" width="1440" height="900" alt="Araphor console showing protected and observed Kubernetes workloads, suggested controls, evidence coverage, and open findings" loading="lazy">
+            </div>
+            <figcaption>
+              <strong>Build policy from real activity</strong>
+              <span>See which files, processes, connections, and Kubernetes actions are used. Approve the policy before enforcement.</span>
+            </figcaption>
+          </figure>
+
+          <figure id="replay-panel" class="product-panel" role="tabpanel" aria-labelledby="replay-tab" data-product-panel="replay" hidden>
+            <div class="product-window">
+              <div class="product-window-bar" aria-hidden="true">
+                <span><i></i><i></i><i></i></span>
+                <b>ARAPHOR / SESSION EVIDENCE</b>
+              </div>
+              <img src="assets/product/causal-replay.png" width="1440" height="900" alt="Araphor causal replay showing an AI agent intrusion across a source workload, Kubernetes control plane, and target worker" loading="lazy">
+            </div>
+            <figcaption>
+              <strong>See how the attack moved</strong>
+              <span>Follow an AI-agent action from its source to the decision and physical result.</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="product-disclosure">Available for selected Linux and Kubernetes environments.</p>
+      </div>
+    </section>
+
+    <section id="protection" class="protection-section" aria-labelledby="protection-title">
+      <div class="shell protection-grid">
+        <div class="section-heading protection-heading">
+          <p class="eyebrow">What Araphor stops</p>
+          <h2 id="protection-title" data-pretext data-editable contenteditable="false">Protect the action.<br>Not the promise.</h2>
+          <p>Prompts guide the agent. Araphor controls what it can do to the system.</p>
+        </div>
+
+        <div class="protection-list">
+          <article>
+            <p><span>01</span><code>FILE</code></p>
+            <div>
+              <h3>Keep secrets unread</h3>
+              <p>Deny access to credentials and protected files before bytes return.</p>
+            </div>
+          </article>
+          <article>
+            <p><span>02</span><code>PROCESS</code></p>
+            <div>
+              <h3>Stop a new shell</h3>
+              <p>Deny an unapproved executable before the new process starts.</p>
+            </div>
+          </article>
+          <article>
+            <p><span>03</span><code>NETWORK</code></p>
+            <div>
+              <h3>Close forbidden routes</h3>
+              <p>Deny connections to protected destinations before the workload reaches them.</p>
+            </div>
+          </article>
+          <article>
+            <p><span>04</span><code>KUBERNETES</code></p>
+            <div>
+              <h3>Reject dangerous workloads</h3>
+              <p>Reject privileged and disallowed Kubernetes changes before the API stores them.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="boundary" class="boundary-section" aria-labelledby="boundary-title">
+      <div class="shell boundary-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Why Araphor</p>
+          <h2 id="boundary-title" data-pretext data-editable contenteditable="false">Hold the line.<br>Before harm crosses it.</h2>
+        </div>
+
+        <div class="boundary-statement">
+          <p class="statement-number">01</p>
+          <h3>Named for a defender</h3>
+          <p>In Tolkien's histories, Araphor drove an invading force back from Fornost and the North Downs.</p>
+        </div>
+        <div class="boundary-statement">
+          <p class="statement-number">02</p>
+          <h3>Built to hold the boundary</h3>
+          <p>Araphor holds the execution boundary around an agent or workload. Forbidden actions do not cross it.</p>
+        </div>
+        <div class="boundary-answer">
+          <p class="answer-label">THE BOUNDARY STILL HOLDS WHEN</p>
+          <ul>
+            <li>the agent changes its tool or tactic;</li>
+            <li>a prompt or tool guardrail is bypassed;</li>
+            <li>a compromised service carries out the action; or</li>
+            <li>no human reviews the next action.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="proof-section" aria-labelledby="proof-title">
+      <div class="shell proof-grid">
+        <div class="proof-kicker">
+          <p class="eyebrow">Why this matters now</p>
+          <p class="proof-count">17,600</p>
+          <p class="proof-count-label">agent actions reconstructed across the 4.5-day Hugging Face campaign</p>
+        </div>
+
+        <div class="proof-copy">
+          <h2 id="proof-title" data-pretext data-editable contenteditable="false">The agent kept trying.<br>One path was enough.</h2>
+          <p data-pretext data-editable contenteditable="false">
+            AI agents can change tactics and try again. They need one allowed
+            path. Araphor checks each covered action at the execution boundary
+            and stops what policy forbids.
+          </p>
+        </div>
+
+        <div class="public-cases" aria-label="Public AI-agent incidents and security disclosures">
+          <article class="public-case">
+            <p class="case-type">CONFIRMED INTRUSION · 2026</p>
+            <h3>Hugging Face</h3>
+            <p>An OpenAI evaluation agent escaped its sandbox, compromised a worker, read secrets, reached cloud metadata, and moved through Kubernetes.</p>
+            <a href="https://huggingface.co/blog/agent-intrusion-technical-timeline" target="_blank" rel="noreferrer">Technical timeline <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="public-case">
+            <p class="case-type">THREE CONFIRMED INTRUSIONS · 2026</p>
+            <h3>Anthropic evaluations</h3>
+            <p>Anthropic found three incidents where Claude models reached the open internet from evaluation environments and gained unauthorized access to three organizations' systems.</p>
+            <a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" target="_blank" rel="noreferrer">Anthropic investigation <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="public-case">
+            <p class="case-type">CONFIRMED LIVE-INTERNET ACTIONS · 2026</p>
+            <h3>UK AI Security Institute</h3>
+            <p>In 10 evaluation runs, agents took 19 unsanctioned actions against real people and organizations. A human stopped the most serious attempt, and no resulting harm was found.</p>
+            <a href="https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing" target="_blank" rel="noreferrer">AISI incident report <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="public-case">
+            <p class="case-type">CONFIRMED DATA DELETION · 2025</p>
+            <h3>Replit</h3>
+            <p>Replit confirmed that its Agent deleted data from an app database. A rollback restored the data after the harmful action had happened.</p>
+            <a href="https://replit.com/blog/doubling-down-on-our-commitment-to-secure-vibe-coding" target="_blank" rel="noreferrer">Replit disclosure <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="public-case">
+            <p class="case-type">PATCHED CVE · 2025</p>
+            <h3>GitHub Copilot</h3>
+            <p>A prompt injection could change VS Code settings, remove command approvals, and make the agent run terminal commands.</p>
+            <a href="https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/" target="_blank" rel="noreferrer">CVE-2025-53773 research <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="public-case">
+            <p class="case-type">REPRODUCED ATTACK · 2025</p>
+            <h3>MCP tool poisoning</h3>
+            <p>Hidden tool instructions made an agent read configuration and SSH-key files and send the contents to a malicious server.</p>
+            <a href="https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks" target="_blank" rel="noreferrer">Invariant Labs research <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <div class="chain-table" role="table" aria-label="Hugging Face incident control map">
+          <div class="chain-row chain-header" role="row">
+            <span role="columnheader">What the agent tried</span>
+            <span role="columnheader">Where Araphor stops it</span>
+            <span role="columnheader">Protected result</span>
+          </div>
+          <div class="chain-row" role="row">
+            <span role="cell">Read <code>/proc/self/environ</code></span>
+            <span role="cell">Deny the file open before bytes return</span>
+            <span class="claim-verified" role="cell">SECRET UNREAD</span>
+          </div>
+          <div class="chain-row" role="row">
+            <span role="cell">Start shell tools from the worker</span>
+            <span role="cell">Deny the process execution before start</span>
+            <span class="claim-prevented" role="cell">NO PROCESS</span>
+          </div>
+          <div class="chain-row" role="row">
+            <span role="cell">Connect to cloud metadata</span>
+            <span role="cell">Deny the connection before credentials return</span>
+            <span class="claim-verified" role="cell">NO CREDENTIAL</span>
+          </div>
+          <div class="chain-row" role="row">
+            <span role="cell">Create a privileged Pod</span>
+            <span role="cell">Reject the Pod before Kubernetes stores it</span>
+            <span class="claim-prevented" role="cell">NO NODE ROOT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mechanism" class="mechanism-section" aria-labelledby="mechanism-title">
+      <div class="shell">
+        <div class="section-heading mechanism-heading">
+          <p class="eyebrow">How Araphor works</p>
+          <h2 id="mechanism-title" data-pretext data-editable contenteditable="false">Observe. Review.<br>Then enforce.</h2>
+          <p>Araphor enforces policy around the agent or workload you protect. No application, agent, or model change is required.</p>
+        </div>
+
+        <ol class="mechanism-list">
+          <li>
+            <span class="mechanism-index">01</span>
+            <div>
+              <h3>Record actions</h3>
+              <p>See the files, processes, connections, tools, and Kubernetes actions in use.</p>
+            </div>
+            <span class="mechanism-tag">OBSERVE</span>
+          </li>
+          <li>
+            <span class="mechanism-index">02</span>
+            <div>
+              <h3>Review suggested policy</h3>
+              <p>Araphor suggests controls from real activity. You decide what becomes policy.</p>
+            </div>
+            <span class="mechanism-tag">SUGGEST</span>
+          </li>
+          <li>
+            <span class="mechanism-index">03</span>
+            <div>
+              <h3>Enable Protect</h3>
+              <p>Araphor applies the approved policy to the selected agent or workload.</p>
+            </div>
+            <span class="mechanism-tag mechanism-tag-hot">PROTECT</span>
+          </li>
+          <li>
+            <span class="mechanism-index">04</span>
+            <div>
+              <h3>Verify the result</h3>
+              <p>The event record shows the request, the decision, and the resulting system effect.</p>
+            </div>
+            <span class="mechanism-tag">PROVE</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="workloads" class="workloads-section" aria-labelledby="workloads-title">
+      <div class="shell workloads-grid">
+        <div class="section-heading workloads-heading">
+          <p class="eyebrow">Where Araphor fits</p>
+          <h2 id="workloads-title" data-pretext data-editable contenteditable="false">Protect the agent.<br>Protect the workload.</h2>
+          <p>Deploy Araphor where AI-agent actions begin, where they take effect, or both.</p>
+        </div>
+
+        <div class="workload-list">
+          <article>
+            <span>01</span>
+            <h3>Evaluation and training agents</h3>
+            <p>Keep experimental agents and sandboxes inside their approved boundaries.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Coding and operations agents</h3>
+            <p>Control file, process, network, browser, and tool actions from agents with real access.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>AI-platform workloads</h3>
+            <p>Protect dataset, evaluation, inference, and automation workers from agent-driven attacks.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Kubernetes platforms</h3>
+            <p>Stop secret access, dangerous workloads, protected connections, and privilege escalation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="shell faq-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-title">What teams ask.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Why call it Araphor?</summary>
+            <p>Araphor defended Fornost when an invading force tried to break through. The product holds the execution boundary before a harmful action reaches the system.</p>
+          </details>
+          <details>
+            <summary>Is Araphor an AI guardrail?</summary>
+            <p>No. Guardrails influence what an agent decides. Araphor enforces policy on the resulting action.</p>
+          </details>
+          <details>
+            <summary>Does Araphor need to see the agent?</summary>
+            <p>No. Araphor can protect a workload by enforcing policy on its local actions. When deployed around an agent, it can also use task and approval context to contain the agent.</p>
+          </details>
+          <details>
+            <summary>Must Araphor recognize the model?</summary>
+            <p>No. The policy applies to the action, regardless of which model or software requested it.</p>
+          </details>
+          <details>
+            <summary>Does Araphor replace other security tools?</summary>
+            <p>No. Keep your identity, endpoint, detection, and incident-response controls. Araphor adds prevention at the point of action.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="early-access" class="request-section" aria-labelledby="request-title">
+      <div class="shell request-grid">
+        <div class="request-copy">
+          <p class="eyebrow">Early access</p>
+          <h2 id="request-title" data-pretext data-editable contenteditable="false">Start with one<br>agent or workload.</h2>
+          <p>Begin in Observe. Review the suggested policy with us. Turn on Protect when ready.</p>
+        </div>
+
+        <div class="request-actions">
+          <form class="access-form" novalidate>
+            <label for="access-email">Work email</label>
+            <div class="access-form-row">
+              <input id="access-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+              <button type="submit">Request early access</button>
+            </div>
+            <p class="form-status" aria-live="polite">Product updates are included. Unsubscribe at any time.</p>
+          </form>
+
+          <div id="book-demo" class="demo-option">
+            <div>
+              <p>Prefer a walkthrough?</p>
+              <span>See Observe → Suggest → Protect on a real agent or workload in 30 minutes.</span>
+            </div>
+            <a class="button button-secondary-light" href="#early-access" data-calcom>Book a 30-minute demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-identity">
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M12 52 32 12l20 40M20 36h24"/>
+            <path class="brand-stop" d="M40 33h20v6H40z"/>
+          </svg>
+          <span class="brand-name">ARAPHOR</span>
+        </div>
+        <p>Stops harmful AI-agent actions before they take effect.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#early-access">Request early access</a>
+        <a href="#book-demo" data-calcom>Book a 30-minute demo</a>
+        <a href="#attack-lab">Incident replay</a>
+      </div>
+      <p class="footer-owner">Araphor · 2026</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

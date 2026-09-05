@@ -1,0 +1,51 @@
+:root {
+  --paper: #f1f3ef;
+  --white: #fafbf8;
+  --ink: #101512;
+  --carbon: #0b100e;
+  --dark-surface: #151c19;
+  --dark-text: #f1f3ef;
+  --dark-muted: #a8b6b0;
+  --dark-rule: #36433e;
+  --iron: #515d57;
+  --brand-metal: #bcc8c3;
+  --brand-metal-dark: #80938d;
+  --rule: #bcc8c3;
+  --soft-rule: #dce2df;
+  --signal: #66547a;
+  --signal-dark: #b7a7c8;
+  --verified: #17654c;
+  --verified-dark: #63d0a0;
+  --unknown: #76520d;
+  --unknown-dark: #e1b35a;
+  --information: #2b6075;
+  --information-dark: #82bed6;
+}
+
+:root,
+:root[data-color-scheme="forged-silver-5"] {
+  --denied: #954735;
+  --denied-dark: #f2a08a;
+}
+
+:root[data-color-scheme="forged-silver"] {
+  --signal: #456f69;
+  --signal-dark: #8ab8ae;
+  --denied: #b63d27;
+  --denied-dark: #ff8066;
+}
+
+:root[data-color-scheme="forged-silver-2"] {
+  --denied: #b63d27;
+  --denied-dark: #ff8066;
+}
+
+:root[data-color-scheme="forged-silver-3"] {
+  --denied: #a83a2a;
+  --denied-dark: #ff8a72;
+}
+
+:root[data-color-scheme="forged-silver-4"] {
+  --denied: #b4232d;
+  --denied-dark: #ff7a83;
+}

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Forged Silver 2 Araphor color theme</title>
+  <desc id="desc">A cold silver and graphite palette with a muted violet brand signal and separate colors for denied, verified, warning, and information states.</desc>
+  <rect width="1400" height="620" fill="#F1F3EF"/>
+  <rect x="32" y="32" width="1336" height="556" fill="#FAFBF8" stroke="#BCC8C3" stroke-width="2"/>
+
+  <g font-family="Arial, sans-serif" fill="#101512">
+    <text x="72" y="86" font-size="16" font-weight="700" letter-spacing="2">02 / SELECTED</text>
+    <text x="72" y="140" font-size="44" font-weight="700" letter-spacing="-1">FORGED SILVER 2</text>
+    <text x="72" y="176" font-size="19" fill="#515D57">Light metal. A violet signal. Color appears when the system acts.</text>
+  </g>
+
+  <g font-family="monospace" font-size="13">
+    <rect x="72" y="224" width="128" height="116" fill="#F1F3EF" stroke="#BCC8C3"/>
+    <text x="84" y="368" fill="#101512">CANVAS</text><text x="84" y="388" fill="#515D57">#F1F3EF</text>
+    <rect x="216" y="224" width="128" height="116" fill="#101512"/>
+    <text x="228" y="368" fill="#101512">INK</text><text x="228" y="388" fill="#515D57">#101512</text>
+    <rect x="360" y="224" width="128" height="116" fill="#BCC8C3"/>
+    <text x="372" y="368" fill="#101512">BRAND METAL</text><text x="372" y="388" fill="#515D57">#BCC8C3</text>
+    <rect x="72" y="420" width="128" height="72" fill="#66547A"/>
+    <text x="84" y="520" fill="#101512">VIOLET</text><text x="84" y="540" fill="#515D57">#66547A</text>
+    <rect x="216" y="420" width="128" height="72" fill="#B63D27"/>
+    <text x="228" y="520" fill="#101512">DENIED</text><text x="228" y="540" fill="#515D57">#B63D27</text>
+    <rect x="360" y="420" width="128" height="72" fill="#17654C"/>
+    <text x="372" y="520" fill="#101512">VERIFIED</text><text x="372" y="540" fill="#515D57">#17654C</text>
+  </g>
+
+  <rect x="548" y="72" width="756" height="476" fill="#0B100E"/>
+  <g font-family="Arial, sans-serif">
+    <text x="588" y="116" font-size="13" font-weight="700" letter-spacing="2" fill="#B7A7C8">PROTECTED WORKLOAD</text>
+    <text x="588" y="160" font-size="30" font-weight="700" fill="#F1F3EF">The action stopped here.</text>
+    <line x1="588" y1="192" x2="1264" y2="192" stroke="#80938D"/>
+    <text x="588" y="232" font-family="monospace" font-size="14" fill="#A8B6B0">openat("/var/run/secrets/.../token", O_RDONLY)</text>
+    <rect x="588" y="258" width="676" height="72" fill="#151C19" stroke="#80938D"/>
+    <circle cx="620" cy="294" r="8" fill="#FF8066"/>
+    <text x="644" y="289" font-family="monospace" font-size="12" fill="#A8B6B0">POLICY RESULT</text>
+    <text x="644" y="311" font-family="monospace" font-size="16" font-weight="700" fill="#FF8066">DENIED BEFORE READ</text>
+    <rect x="588" y="350" width="324" height="62" fill="#151C19" stroke="#80938D"/>
+    <text x="608" y="375" font-family="monospace" font-size="11" fill="#A8B6B0">PHYSICAL EFFECT</text>
+    <text x="608" y="398" font-family="monospace" font-size="14" fill="#63D0A0">VERIFIED · NO BYTES READ</text>
+    <rect x="928" y="350" width="336" height="62" fill="#151C19" stroke="#80938D"/>
+    <text x="948" y="375" font-family="monospace" font-size="11" fill="#A8B6B0">EVIDENCE</text>
+    <text x="948" y="398" font-family="monospace" font-size="14" fill="#82BED6">ACTOR + OBJECT RECORDED</text>
+    <rect x="588" y="448" width="232" height="56" fill="#F1F3EF"/>
+    <text x="704" y="482" font-size="13" text-anchor="middle" font-weight="700" letter-spacing="1" fill="#101512">REQUEST EARLY ACCESS</text>
+    <text x="844" y="481" font-size="13" fill="#A8B6B0">Neutral action. Semantic colors keep their meaning.</text>
+  </g>
+</svg>

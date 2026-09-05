@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Ember Forge Araphor color theme</title>
+  <desc id="desc">A warm paper, iron, and rust palette that evolves the current website colors.</desc>
+  <rect width="1400" height="620" fill="#F2EDE3"/>
+  <rect x="32" y="32" width="1336" height="556" fill="#FCF9F2" stroke="#BDB4A7" stroke-width="2"/>
+
+  <g font-family="Arial, sans-serif" fill="#1A1612">
+    <text x="72" y="86" font-size="16" font-weight="700" letter-spacing="2">08 / CONTINUITY OPTION</text>
+    <text x="72" y="140" font-size="44" font-weight="700" letter-spacing="-1">EMBER FORGE</text>
+    <text x="72" y="176" font-size="19" fill="#655A50">Warm, physical, and close to the current website.</text>
+  </g>
+
+  <g font-family="monospace" font-size="13">
+    <rect x="72" y="224" width="128" height="116" fill="#F2EDE3" stroke="#BDB4A7"/>
+    <text x="84" y="368" fill="#1A1612">CANVAS</text><text x="84" y="388" fill="#655A50">#F2EDE3</text>
+    <rect x="216" y="224" width="128" height="116" fill="#1A1612"/>
+    <text x="228" y="368" fill="#1A1612">INK</text><text x="228" y="388" fill="#655A50">#1A1612</text>
+    <rect x="360" y="224" width="128" height="116" fill="#BDB4A7"/>
+    <text x="372" y="368" fill="#1A1612">IRON</text><text x="372" y="388" fill="#655A50">#BDB4A7</text>
+    <rect x="72" y="420" width="128" height="72" fill="#8A4A2B"/>
+    <text x="84" y="520" fill="#1A1612">BRAND RUST</text><text x="84" y="540" fill="#655A50">#8A4A2B</text>
+    <rect x="216" y="420" width="128" height="72" fill="#AF3424"/>
+    <text x="228" y="520" fill="#1A1612">DENIED</text><text x="228" y="540" fill="#655A50">#AF3424</text>
+    <rect x="360" y="420" width="128" height="72" fill="#356148"/>
+    <text x="372" y="520" fill="#1A1612">VERIFIED</text><text x="372" y="540" fill="#655A50">#356148</text>
+  </g>
+
+  <rect x="548" y="72" width="756" height="476" fill="#18120F"/>
+  <g font-family="Arial, sans-serif">
+    <text x="588" y="116" font-size="13" font-weight="700" letter-spacing="2" fill="#D48A61">PROTECTED WORKLOAD</text>
+    <text x="588" y="160" font-size="30" font-weight="700" fill="#F4EEE4">The action stopped here.</text>
+    <line x1="588" y1="192" x2="1264" y2="192" stroke="#82776B"/>
+    <text x="588" y="232" font-family="monospace" font-size="14" fill="#BDB1A5">openat("/var/run/secrets/.../token", O_RDONLY)</text>
+    <rect x="588" y="258" width="676" height="72" fill="#241B16" stroke="#82776B"/>
+    <circle cx="620" cy="294" r="8" fill="#FF8268"/>
+    <text x="644" y="289" font-family="monospace" font-size="12" fill="#BDB1A5">POLICY RESULT</text>
+    <text x="644" y="311" font-family="monospace" font-size="16" font-weight="700" fill="#FF8268">DENIED BEFORE READ</text>
+    <rect x="588" y="350" width="324" height="62" fill="#241B16" stroke="#82776B"/>
+    <text x="608" y="375" font-family="monospace" font-size="11" fill="#BDB1A5">PHYSICAL EFFECT</text>
+    <text x="608" y="398" font-family="monospace" font-size="14" fill="#77C99E">VERIFIED · NO BYTES READ</text>
+    <rect x="928" y="350" width="336" height="62" fill="#241B16" stroke="#82776B"/>
+    <text x="948" y="375" font-family="monospace" font-size="11" fill="#BDB1A5">EVIDENCE</text>
+    <text x="948" y="398" font-family="monospace" font-size="14" fill="#E0B15A">ACTOR + OBJECT RECORDED</text>
+    <rect x="588" y="448" width="232" height="56" fill="#8A4A2B"/>
+    <text x="704" y="482" font-size="13" text-anchor="middle" font-weight="700" letter-spacing="1" fill="#FCF9F2">REQUEST EARLY ACCESS</text>
+    <text x="844" y="481" font-size="13" fill="#BDB1A5">Warm and physical. Rust competes with denied red.</text>
+  </g>
+</svg>
