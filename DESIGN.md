@@ -46,7 +46,7 @@
 - **Brand metal, dark:** `#80938D` for borders and diagrams on dark surfaces.
 - **Rule:** `#BCC8C3` for structural borders.
 - **Soft rule:** `#DCE2DF` for quiet separators.
-- **Forge violet:** `#66547A` on light surfaces and `#B7A7C8` on dark
+- **Forge violet:** `#6D4D8D` on light surfaces and `#C39CDF` on dark
   surfaces. Use it for brand details, focus, selection, and product paths.
 - **Denied:** `#954735` on light surfaces and `#F2A08A` on dark surfaces.
 - **Verified:** `#17654C` on light surfaces and `#63D0A0` on dark surfaces.
@@ -149,6 +149,7 @@ Both marks use simple geometry, one color accent, and no shield silhouette.
 | 2026-09-05 | Make human approval explicit in the first screen | The copy now separates observation, policy proposal, approval, and enforcement. |
 | 2026-09-05 | Present agent and workload protection as one product | Araphor controls actions at the execution boundary. Agent context can improve policy, but workload enforcement does not require agent attribution. |
 | 2026-09-05 | Restore the outcome-led hero promise | `Stop AI agents before they do harm` states the customer result. The supporting copy explains agent and workload coverage. |
+| 2026-09-05 | Trial Forged Silver 6 on the website | The variant increases violet chroma while it preserves hue, lightness, contrast, and the Forged Silver 5 semantic colors. |
 
 ## Acquisition references
 

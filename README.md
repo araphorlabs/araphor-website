@@ -43,12 +43,14 @@ Change the `data-color-scheme` value on the root `html` element in
 `index.html`. The website currently uses:
 
 ```html
-<html lang="en" data-color-scheme="forged-silver-5">
+<html lang="en" data-color-scheme="forged-silver-6">
 ```
 
 The available values are `forged-silver`, `forged-silver-2`,
-`forged-silver-3`, `forged-silver-4`, and `forged-silver-5`. The last four
-schemes keep the violet brand signal and change only the denied color.
+`forged-silver-3`, `forged-silver-4`, `forged-silver-5`, and
+`forged-silver-6`. Forged Silver 3 through 5 change the denied color. Forged
+Silver 6 keeps the Forged Silver 5 semantic colors and increases the violet
+brand signal.
 
 ## Build
 

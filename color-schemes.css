@@ -28,6 +28,13 @@
   --denied-dark: #f2a08a;
 }
 
+:root[data-color-scheme="forged-silver-6"] {
+  --signal: #6d4d8d;
+  --signal-dark: #c39cdf;
+  --denied: #954735;
+  --denied-dark: #f2a08a;
+}
+
 :root[data-color-scheme="forged-silver"] {
   --signal: #456f69;
   --signal-dark: #8ab8ae;

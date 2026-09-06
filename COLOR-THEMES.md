@@ -1,13 +1,14 @@
 # Araphor Color Themes
 
-This study defines eight color directions for the Araphor website and product.
-Forged Silver 5 is applied to the website for evaluation. The selected scheme
+This study defines nine color directions for the Araphor website and product.
+Forged Silver 6 is applied to the website for evaluation. The selected scheme
 can change through one attribute in `index.html`.
 
 ## Recommendation
 
-Use **Forged Silver 2** as the base direction. The website currently trials
-**Forged Silver 5**, which changes only the denied pair.
+Use **Forged Silver 6** as the current direction. It keeps the Forged Silver 5
+fired-clay denied pair and increases only the violet brand chroma. The violet
+keeps almost the same perceptual lightness and hue as Forged Silver 2.
 
 If the denied color changes, use **Forged Silver 3**. Its iron-oxide pair is
 closest to Ember Forge. It is warmer and quieter than the current denied pair,
@@ -60,6 +61,13 @@ presence without making the site look like a generic AI product.
 | --- | --- | --- |
 | ![Forged Silver 3 preview](assets/color-themes/forged-silver-3.svg) | ![Forged Silver 4 preview](assets/color-themes/forged-silver-4.svg) | ![Forged Silver 5 preview](assets/color-themes/forged-silver-5.svg) |
 | `#A83A2A` / `#FF8A72` | `#B4232D` / `#FF7A83` | `#954735` / `#F2A08A` |
+
+## Brand-accent comparison
+
+| Forged Silver 5 · muted violet | Forged Silver 6 · clearer violet |
+| --- | --- |
+| ![Forged Silver 5 preview](assets/color-themes/forged-silver-5.svg) | ![Forged Silver 6 preview](assets/color-themes/forged-silver-6.svg) |
+| `#66547A` / `#B7A7C8` | `#6D4D8D` / `#C39CDF` |
 
 ## 01. Forged Silver
 
@@ -169,7 +177,36 @@ graphite, and violet. The hue remains red-orange instead of warning amber.
 **Tradeoff:** The softer signal has less urgency. It is better for evidence and
 status display than for emergency alerts.
 
-## 06. Moonlit Steel
+## 06. Forged Silver 6
+
+**Active website trial.** This variant increases the violet chroma without a
+large change to its lightness or hue. All neutral and semantic colors remain
+the same as Forged Silver 5.
+
+![Forged Silver 6 color theme](assets/color-themes/forged-silver-6.svg)
+
+| Role | Light surface | Dark surface | Use |
+| --- | --- | --- | --- |
+| Canvas | `#F1F3EF` | `#0B100E` | Page background and deep evidence sections |
+| Surface | `#FAFBF8` | `#151C19` | Raised fields and evidence panels |
+| Primary text | `#101512` | `#F1F3EF` | Headings, body text, and neutral actions |
+| Secondary text | `#515D57` | `#A8B6B0` | Supporting copy and metadata |
+| Brand metal | `#BCC8C3` | `#80938D` | Logo field, quiet separators, and large decoration |
+| Forge violet | `#6D4D8D` | `#C39CDF` | Focus, selection, essential boundaries, and brand detail; not a result |
+| Denied | `#954735` | `#F2A08A` | A prohibited physical effect was stopped |
+| Verified | `#17654C` | `#63D0A0` | A positive physical result was verified |
+| Warning | `#76520D` | `#E1B35A` | Unsupported, uncertain, or degraded state |
+| Information | `#2B6075` | `#82BED6` | Neutral product and system information |
+
+**Design basis:** The light violet keeps an OKLCH lightness of `0.482` and a
+hue of `305.9°`. Its chroma increases from `0.063` to `0.105`. The dark violet
+keeps an OKLCH lightness of `0.752` and a hue of `310.6°`. Its chroma increases
+from `0.050` to `0.103`.
+
+**Tradeoff:** The brand becomes easier to notice. Violet must remain limited to
+brand details, focus, selection, and protected paths.
+
+## 07. Moonlit Steel
 
 This direction is cooler and more technical. It will feel familiar to security
 and infrastructure buyers, and it will be easy to extend into diagrams.
@@ -193,7 +230,7 @@ and infrastructure buyers, and it will be easy to extend into diagrams.
 **Tradeoff:** This is the safest category choice and the least ownable. Blue can
 make Araphor look like another cloud-security company.
 
-## 07. Black Steel
+## 08. Black Steel
 
 This direction makes the website dark first. Silver becomes the main brand
 signal. Bright colors appear only for results and active controls.
@@ -220,7 +257,7 @@ signal. Bright colors appear only for results and active controls.
 dark-first security site is less distinct. Long marketing copy also needs more
 care on dark surfaces.
 
-## 08. Ember Forge
+## 09. Ember Forge
 
 This direction evolves the current warm paper and orange identity. It feels
 industrial and human, and it keeps the most continuity with the existing site.
@@ -253,6 +290,7 @@ than the defender story and risks a forge or fantasy theme instead of a system b
 | **Forged Silver 3** | Strong | Strong | Strong | Restrained denial needs a clear label and stop shape |
 | Forged Silver 4 | Medium | Strong | Medium | Conventional application-error red |
 | Forged Silver 5 | Strong | Medium | Strong | Softer denial has less urgency |
+| **Forged Silver 6** | Strong | Strong | Strong | More violet requires disciplined use |
 | Moonlit Steel | Medium | Strong | Weak | Looks like standard cloud security |
 | Black Steel | Strong | Strong | Medium | Dark security sites are common |
 | Ember Forge | Medium | Medium | Medium | Brand and denied colors are too close |
@@ -262,6 +300,9 @@ than the defender story and risks a forge or fantasy theme instead of a system b
 All text pairings shown in the previews meet WCAG AA for normal text. The
 lowest checked ratio is `4.92:1` for Moonlit Steel denied text on its light
 canvas. Primary text pairings range from `15.42:1` to `17.46:1`.
+
+Forged Silver 6 violet has `6.07:1` contrast on the light canvas and `8.35:1`
+contrast on the dark canvas.
 
 The listed metal colors are for large graphics, borders, or decoration. Do not
 use them for small text without a separate contrast check. Keep text labels and

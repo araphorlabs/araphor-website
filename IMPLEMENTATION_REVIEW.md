@@ -114,13 +114,17 @@ directory.
   title.
 - The browser read `https://araphor.com/` as the canonical URL.
 - The browser found no old product or company name in the rendered page text.
-- The light forge-violet text pairing measured `6.04:1`. The dark pairing measured `8.56:1`.
+- The Forged Silver 6 violet pair measured `6.07:1` on paper and `8.35:1`
+  on carbon.
 - The Forged Silver 5 denied pair measured `5.82:1` on paper and `9.29:1` on carbon.
 - The denied, verified, and information text pairings met the WCAG AA `4.5:1` threshold on their assigned light and dark surfaces.
 - Playwright opened the landing page.
-- Playwright read `#954735` and `#F2A08A` as the active Forged Silver 5 denied pair.
-- Playwright changed the root scheme to Forged Silver 4 and read `#B4232D` and `#FF7A83`. It then restored Forged Silver 5 without a page reload.
-- Playwright captured the full page and the active protected incident path with Forged Silver 5.
+- Playwright read `#6D4D8D` and `#C39CDF` as the active Forged Silver 6
+  violet pair. It read `#954735` and `#F2A08A` as the denied pair.
+- Playwright changed the root scheme to Forged Silver 4 and read `#B4232D` and
+  `#FF7A83`. It then restored Forged Silver 6 without a page reload.
+- Playwright captured the page and the active protected incident path with
+  Forged Silver 6.
 - Playwright captured Forged Silver 2 at 1440 by 1000 pixels and 390 by 844 pixels.
 - Playwright found the three protection tabs and the two-state path toggle in the top graph toolbar.
 - Playwright selected the Araphor path. The token followed the shared events and then the denied branch. The lower trace changed to `POLICY`, `DECISION`, `RESULT`, and `VERIFIED` records.
