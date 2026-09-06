@@ -24,7 +24,7 @@ URL is configured.
   -> [Pretext dependency](package.json) the build includes the optional text-layout enhancement
 
 [brand identity](index.html) The visitor sees the Araphor name in the page metadata, navigation, product copy, calls to action, and footer
-  -> [Araphor favicon](assets/favicon.svg) the browser displays the A boundary mark
+  -> [Araphor mark](assets/araphor-mark.svg) the header, footer, and browser icon use the crown-and-fortress mark
   -> [console captures](assets/product) the product views show the Araphor console brand
   -> [canonical URL](index.html) search and social metadata identify `https://araphor.com/` as the primary website
 
@@ -92,11 +92,12 @@ URL is configured.
 | `styles.css` | Typography, components, and responsive layout | Visual presentation that consumes color tokens | Google Fonts remain a remote asset |
 | `script.js` | Page-local interaction state | Navigation, incident-flow state, tabs, form feedback, and Cal.com link activation | No durable state or access-form network request |
 | `vite.config.js` | Build entry point | `index.html` in `dist/` | Static build only |
+| `assets/araphor-mark.svg` | Crown-and-fortress geometry | Theme-aware vector mark and browser icon | The standalone file uses Forged Silver 6 light-surface colors |
 | `assets/product/` | Console-fixture captures | Product views in the landing page | Images do not prove product integration |
 
 ## Verification
 
-The review covers the website working tree on 2026-09-05. The website is an
+The review covers the website working tree on 2026-09-06. The website is an
 independent Git repository. The parent repository ignores the `.gstack`
 directory.
 
@@ -109,6 +110,9 @@ directory.
 - Playwright captured the revised hero at 1440, 768, and 390 pixels. It also
   captured the proof, deployment, and conversion sections at 1440 pixels.
 - `xmllint` accepted the favicon, logo, and color-theme SVG files.
+- `xmllint` accepted `assets/araphor-mark.svg`.
+- Playwright displayed the selected mark in the header and dark footer.
+- A source scan found no reference to the removed logo study or old logo assets.
 - A complete source and build scan found no previous product or company name in the website directory.
 - The browser read `Araphor | Stop AI agents before they do harm` as the page
   title.
@@ -142,8 +146,8 @@ directory.
 - The page has dedicated product, protection, rollout, workload, incident, and FAQ sections.
 - Playwright selected the causal-replay product view. The workload view became hidden, and the causal-replay view became visible.
 - The browser accepted one valid work email and returned the inactive-endpoint status.
-- The production build contains the landing page only. It does not contain the local logo study.
-- A source scan found no public price, internal design instruction, or link to the local logo study in the landing page.
+- The production build contains the landing page only.
+- A source scan found no public price or internal design instruction in the landing page.
 - The browser console reported no runtime error or warning on the landing page.
 
 The checks do not cover a deployed host, form delivery, a configured Cal.com

@@ -152,17 +152,17 @@ summary:focus-visible,
 }
 
 .brand-mark {
+  display: block;
   width: 38px;
   height: 38px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 6px;
-  stroke-linejoin: miter;
 }
 
-.brand-mark .brand-stop {
+.brand-mark-ink {
+  fill: currentColor;
+}
+
+.brand-mark-signal {
   fill: var(--signal);
-  stroke: none;
 }
 
 .brand-name {

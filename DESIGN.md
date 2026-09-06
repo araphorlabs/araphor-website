@@ -126,7 +126,6 @@ Both marks use simple geometry, one color accent, and no shield silhouette.
 | --- | --- | --- |
 | 2026-09-02 | Use an industrial evidence direction | Araphor sells a physical enforcement result and proof, not an AI experience |
 | 2026-09-02 | Use one orange enforcement accent; superseded on 2026-09-03 | A scarce signal color made the stopped boundary easy to scan, but it also made sales actions look like denied results |
-| 2026-09-02 | Use the Gate logo on the site | It remains distinct and legible without a generic security shield |
 | 2026-09-02 | Show the attack path as the main visual | The visual explains the product boundary faster than an architecture diagram |
 | 2026-09-03 | Lead with stopping harm before it succeeds | Customers need the protected result before they need the enforcement vocabulary |
 | 2026-09-03 | Make Observe, Suggest, and Protect the product workflow | The console and implementation use this adoption path |
@@ -135,7 +134,6 @@ Both marks use simple geometry, one color accent, and no shield silhouette.
 | 2026-09-03 | Keep the path toggle in the graph toolbar | The control must be visible before the visitor inspects the graph. The control has no outer container and uses a large switch target. |
 | 2026-09-03 | Put a decision trace below the graph | The trace shows the request, policy, decision, returned result, and verified physical effect for the selected path. |
 | 2026-09-03 | Remove public pricing and internal process copy | Early YC security companies use a direct product claim and a demo or access request before the offer is repeatable. |
-| 2026-09-03 | Exclude the logo study from the production build | Brand-review notes are internal material. They do not belong in the customer website. |
 | 2026-09-04 | Map the product name to Tolkien's Araphor | Araphor repelled an invading force from Fornost and the North Downs. The product maps this defense to pre-effect enforcement at the system boundary. |
 | 2026-09-03 | Remove the runtime-protection category label | The page now names the protected result and the system boundary. |
 | 2026-09-03 | Use the standard early-stage security-site sequence | The page now leads with the product, shows protection surfaces and rollout, identifies applicable workloads, and ends with one conversion section. |
@@ -150,6 +148,7 @@ Both marks use simple geometry, one color accent, and no shield silhouette.
 | 2026-09-05 | Present agent and workload protection as one product | Araphor controls actions at the execution boundary. Agent context can improve policy, but workload enforcement does not require agent attribution. |
 | 2026-09-05 | Restore the outcome-led hero promise | `Stop AI agents before they do harm` states the customer result. The supporting copy explains agent and workload coverage. |
 | 2026-09-05 | Trial Forged Silver 6 on the website | The variant increases violet chroma while it preserves hue, lightness, contrast, and the Forged Silver 5 semantic colors. |
+| 2026-09-06 | Use the crown-and-fortress mark | The two-part vector mark uses Forged Silver 6 ink and violet. The header, footer, and browser icon use the same source asset. |
 
 ## Acquisition references
 

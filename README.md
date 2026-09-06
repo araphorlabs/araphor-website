@@ -15,8 +15,7 @@ system boundary that stops harmful AI-agent actions on Linux and Kubernetes.
 - `DESIGN.md`: visual and content system;
 - `COLOR-THEMES.md`: researched color directions and visible theme previews;
 - `IMPLEMENTATION_REVIEW.md`: source review route and current limits;
-- `logo-concepts.html`: local comparison page for the two logo directions; and
-- `assets/`: editable SVG logo, favicon, and current console-fixture images.
+- `assets/`: selected SVG mark and current console-fixture images.
 
 ## Develop
 
@@ -27,12 +26,7 @@ npm install
 npm run dev
 ```
 
-Vite prints the local website address. Open these paths at that address:
-
-- `/`
-- `/logo-concepts.html`
-
-The production build does not include the logo comparison page.
+Vite prints the local website address. Open `/` at that address.
 
 Add `?edit=1` to the landing-page URL to edit the primary text blocks in the
 browser.
@@ -67,14 +61,13 @@ to the canonical URL.
 
 ## Before publication
 
-1. Select one logo direction and convert its wordmark text to vector outlines.
-2. Connect the early-access form to the chosen customer relationship system or
+1. Connect the early-access form to the chosen customer relationship system or
    email service.
-3. Set `calcomEventUrl` in `script.js` to the published Araphor event URL.
-4. Add the privacy-policy URL and company contact details.
-5. Replace the demonstration event data only after a retained qualification
+2. Set `calcomEventUrl` in `script.js` to the published Araphor event URL.
+3. Add the privacy-policy URL and company contact details.
+4. Replace the demonstration event data only after a retained qualification
    record proves the new data.
-6. Run accessibility, browser, link, and performance checks on the deployed
+5. Run accessibility, browser, link, and performance checks on the deployed
    site.
 
 The early-access form stores no data and sends no request until you connect its

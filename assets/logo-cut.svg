@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180" role="img" aria-labelledby="title description">
-  <title id="title">Araphor The Cut logo</title>
-  <desc id="description">An incoming path meets a forge-violet boundary before an angular A.</desc>
-  <path d="M20 51l58 39-58 39v-28l20-11-20-11z" fill="#515D57"/>
-  <path d="M91 24h12v132H91z" fill="#66547A"/>
-  <path d="M124 140 167 43l43 97M142 101h50" fill="none" stroke="#101512" stroke-width="12" stroke-linejoin="miter"/>
-  <text x="258" y="111" fill="#101512" font-family="IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="82" font-weight="700" letter-spacing="10">ARAPHOR</text>
-  <text x="262" y="143" fill="#515D57" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="500" letter-spacing="3">STOP HARM BEFORE IT STARTS</text>
-</svg>
