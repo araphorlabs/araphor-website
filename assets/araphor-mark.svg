@@ -3,7 +3,7 @@
   <desc id="description">A crown and fortress divided by a rising boundary.</desc>
   <defs>
     <path id="araphor-mark-ink" d="M320 790V555q0-17 14-26l63-40q10-6 18-1t8 15v126l100-39V416q0-10 8-16l82-57q14-6 29 0l82 61q6 5 6 14v171l38 14q12 4 13 14t-13 20Q568 703 347 804q-13 6-20-1t-7-13Z"/>
-    <path id="araphor-mark-signal" d="M323 968v-78q0-41 33-60 206-108 453-170 20-5 20-27V505q0-12 8-17t18 1l65 43q14 9 14 26v180q0 27-25 37L323 968Z"/>
+    <path id="araphor-mark-signal" d="M323 968v-78q0-41 33-60 276-108 453-170 20-5 20-27V505q0-12 8-17t18 1l65 43q14 9 14 26v180q0 27-25 37L323 968Z"/>
   </defs>
   <use href="#araphor-mark-ink" fill="#101512"/>
   <use href="#araphor-mark-signal" fill="#6D4D8D"/>
