@@ -59,8 +59,8 @@ npm run preview
 ```
 
 The production website is in `dist/`. Deploy that directory to a static host.
-Use `https://araphor.com/` as the canonical URL. Redirect `https://araphor.ai/`
-to the canonical URL.
+Use `https://araphor.ai/` as the canonical URL. Redirect `https://araphor.com/`
+to the canonical URL after the `.com` domain has a valid TLS certificate.
 
 ## Configure the deployed contact paths
 

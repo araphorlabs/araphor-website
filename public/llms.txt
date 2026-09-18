@@ -1,0 +1,13 @@
+# Araphor
+
+> Araphor stops harmful AI-agent actions before they take effect.
+
+Araphor enforces approved policy on actions from AI agents and Linux or
+Kubernetes workloads. Teams can first observe actions, review suggested
+policies, and enable protection when ready.
+
+## Website
+
+- [Product overview](https://araphor.ai/): Product scope, enforcement model, protected actions, and deployment options.
+- [Incident replay](https://araphor.ai/#attack-lab): Published AI-agent incidents and possible enforcement points.
+- [Request early access](https://araphor.ai/#early-access): Early-access request and demo booking.

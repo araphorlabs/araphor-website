@@ -27,8 +27,11 @@ Cal.com action moves to the booking section until the event URL is configured.
 [brand identity](index.html) The visitor sees the Araphor name in the page metadata, navigation, product copy, calls to action, and footer
   -> [Araphor mark](assets/araphor-mark.svg) the header, footer, and browser icon use the crown-and-fortress mark
   -> [console captures](assets/product) the product views show the Araphor console brand
-  -> [canonical URL](index.html) search and social metadata identify `https://araphor.com/` as the primary website
+  -> [canonical URL](index.html) search, social, and structured metadata identify `https://araphor.ai/` as the primary website
   -> [Google verification file](public/googlef3c0b4f4acfab245.html) Google can verify control of the deployed site
+  -> [crawler rules](public/robots.txt) crawlers can access the site and discover the sitemap
+  -> [sitemap](public/sitemap.xml) search engines receive the canonical public URL
+  -> [LLM summary](public/llms.txt) compatible services receive a concise product summary
 
 [hero message](index.html) The visitor sees that Araphor stops AI agents before they do harm
   -> [product scope](index.html) the page states that Araphor controls agents and workloads
@@ -98,12 +101,15 @@ Cal.com action moves to the booking section until the event URL is configured.
 | `api/early-access.js` | One access-request email address and private Vercel environment values | One Resend notification to a fixed inbox | No contact storage or application rate limit |
 | `vite.config.js` | Build entry point | `index.html` in `dist/` | Static build only |
 | `public/googlef3c0b4f4acfab245.html` | Google verification token | Root-level verification file in the deployment | Google controls the token format |
+| `public/robots.txt` | Crawler access and sitemap location | Root-level crawler rules | The site currently allows all crawlers |
+| `public/sitemap.xml` | Canonical public page URL | Root-level XML sitemap | The website currently has one indexable page |
+| `public/llms.txt` | Public product summary and links | Root-level LLM context file | Google does not use this file for ranking |
 | `assets/araphor-mark.svg` | Crown-and-fortress geometry | Theme-aware vector mark and browser icon | The standalone file uses Forged Silver 6 light-surface colors |
 | `assets/product/` | Console-fixture captures | Product views in the landing page | Images do not prove product integration |
 
 ## Verification
 
-The review covers the website working tree on 2026-09-08. The website is an
+The review covers the website working tree on 2026-09-17. The website is an
 independent Git repository. The parent repository ignores the `.gstack`
 directory.
 
@@ -123,7 +129,11 @@ directory.
 - A complete source and build scan found no previous product or company name in the website directory.
 - The browser read `Araphor | Stop AI agents before they do harm` as the page
   title.
-- The browser read `https://araphor.com/` as the canonical URL.
+- The production build declares `https://araphor.ai/` as the canonical URL.
+- `xmllint` accepted the source and built XML sitemaps.
+- The production build copied `robots.txt`, `sitemap.xml`, and `llms.txt`
+  without changes.
+- A JSON parser accepted the `WebSite` structured data in `index.html`.
 - The browser found no old product or company name in the rendered page text.
 - The Forged Silver 6 violet pair measured `6.07:1` on paper and `8.35:1`
   on carbon.
