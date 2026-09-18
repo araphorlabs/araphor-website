@@ -2055,6 +2055,11 @@ summary:focus-visible,
   color: var(--ink);
 }
 
+.access-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 .demo-option {
   display: flex;
   padding: 28px 0;

@@ -9,7 +9,10 @@ system boundary that stops harmful AI-agent actions on Linux and Kubernetes.
 - `color-schemes.css`: selectable Forged Silver color schemes;
 - `styles.css`: typography, components, and responsive layout;
 - `script.js`: navigation, the interactive incident graph, console-view tabs,
-  early-access form feedback, Cal.com link configuration, and text layout support;
+  early-access form delivery, Cal.com link configuration, Vercel Analytics,
+  and text layout support;
+- `api/early-access.js`: Vercel Function that sends access requests through Resend;
+- `test/`: server-side request checks;
 - `package.json`: development and production build commands;
 - `vite.config.js`: build configuration for the website;
 - `DESIGN.md`: visual and content system;
@@ -59,19 +62,26 @@ The production website is in `dist/`. Deploy that directory to a static host.
 Use `https://araphor.com/` as the canonical URL. Redirect `https://araphor.ai/`
 to the canonical URL.
 
-## Before publication
+## Configure the deployed contact paths
 
-1. Connect the early-access form to the chosen customer relationship system or
-   email service.
-2. Set `calcomEventUrl` in `script.js` to the published Araphor event URL.
-3. Add the privacy-policy URL and company contact details.
-4. Replace the demonstration event data only after a retained qualification
+1. Verify `araphor.com` in Resend. Create a sending-only API key.
+2. Add the four values from `.env.example` to the Vercel project settings.
+   Set `EARLY_ACCESS_TO_EMAIL` to the inbox that receives each request. Set
+   `EARLY_ACCESS_FROM_EMAIL` to an address on the verified domain.
+3. Set `VITE_CALCOM_EVENT_URL` to the full URL of the published 30-minute
+   Cal.com event.
+4. Enable Web Analytics in the Vercel project Analytics tab.
+5. Redeploy the production site. Submit one real request and book one test
+   meeting.
+6. Add the privacy-policy URL and company contact details.
+7. Replace the demonstration event data only after a retained qualification
    record proves the new data.
-5. Run accessibility, browser, link, and performance checks on the deployed
+8. Run accessibility, browser, link, and performance checks on the deployed
    site.
 
-The early-access form stores no data and sends no request until you connect its
-endpoint. A demo link moves to the booking section until `calcomEventUrl` is set.
+The early-access form sends an email notification. It does not store a contact
+record. A demo link moves to the booking section until
+`VITE_CALCOM_EVENT_URL` is set.
 The console images come from the local console design fixture. They do not
 prove a connected production system.
 

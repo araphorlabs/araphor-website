@@ -12,9 +12,9 @@ workloads, and inspect sourced public cases. The visitor can request early acces
 with one email address or book a demo through Cal.com. A production contact
 service receives the access request.
 
-The current implementation does not send the access form. The form validates
-local input only. The Cal.com action moves to the booking section until the event
-URL is configured.
+The form sends a notification through Resend when the Vercel environment has
+the required email values. The form does not store a contact record. The
+Cal.com action moves to the booking section until the event URL is configured.
 
 ## Review flow
 
@@ -22,11 +22,13 @@ URL is configured.
   -> [styles.css](styles.css) the stylesheet applies the responsive design
   -> [script.js](script.js) the browser enables navigation and page interactions
   -> [Pretext dependency](package.json) the build includes the optional text-layout enhancement
+  -> [Vercel Analytics dependency](package.json) the browser reports production page views to Vercel
 
 [brand identity](index.html) The visitor sees the Araphor name in the page metadata, navigation, product copy, calls to action, and footer
   -> [Araphor mark](assets/araphor-mark.svg) the header, footer, and browser icon use the crown-and-fortress mark
   -> [console captures](assets/product) the product views show the Araphor console brand
   -> [canonical URL](index.html) search and social metadata identify `https://araphor.com/` as the primary website
+  -> [Google verification file](public/googlef3c0b4f4acfab245.html) Google can verify control of the deployed site
 
 [hero message](index.html) The visitor sees that Araphor stops AI agents before they do harm
   -> [product scope](index.html) the page states that Araphor controls agents and workloads
@@ -73,7 +75,9 @@ URL is configured.
 [early-access call to action](index.html) The visitor moves to the access section
   -> [early-access form](index.html) the visitor enters one work email address
   -> [form validation](script.js) the browser checks the email address
-  -> Not implemented: a contact service receives and stores the request
+  -> [early-access endpoint](api/early-access.js) the Vercel Function validates the address and the hidden spam field
+  -> [Resend request](api/early-access.js) the function sends the address to the configured inbox
+  -> Not implemented: a contact service stores the request
 
 [demo call to action](index.html) The visitor selects the demo action
   -> [Cal.com configuration](script.js) the page opens the configured Cal.com event in a new tab
@@ -90,18 +94,21 @@ URL is configured.
 | `index.html` | Marketing content, semantic document structure, and the active color-scheme name | Landing page | No server rendering |
 | `color-schemes.css` | Forged Silver scheme values | Brand and semantic color tokens | The file defines the Forged Silver family only |
 | `styles.css` | Typography, components, and responsive layout | Visual presentation that consumes color tokens | Google Fonts remain a remote asset |
-| `script.js` | Page-local interaction state | Navigation, incident-flow state, tabs, form feedback, and Cal.com link activation | No durable state or access-form network request |
+| `script.js` | Page-local interaction state | Navigation, incident-flow state, tabs, access requests, Analytics, and Cal.com link activation | No durable state |
+| `api/early-access.js` | One access-request email address and private Vercel environment values | One Resend notification to a fixed inbox | No contact storage or application rate limit |
 | `vite.config.js` | Build entry point | `index.html` in `dist/` | Static build only |
+| `public/googlef3c0b4f4acfab245.html` | Google verification token | Root-level verification file in the deployment | Google controls the token format |
 | `assets/araphor-mark.svg` | Crown-and-fortress geometry | Theme-aware vector mark and browser icon | The standalone file uses Forged Silver 6 light-surface colors |
 | `assets/product/` | Console-fixture captures | Product views in the landing page | Images do not prove product integration |
 
 ## Verification
 
-The review covers the website working tree on 2026-09-06. The website is an
+The review covers the website working tree on 2026-09-08. The website is an
 independent Git repository. The parent repository ignores the `.gstack`
 directory.
 
-- `npm run check` completed the JavaScript syntax check and the Vite 8.2.2 build.
+- `npm run check` completed the JavaScript syntax check, the early-access test,
+  and the Vite 8.2.2 build.
 - Playwright read the AI-agent attack category, the agent-and-workload scope,
   the Observe-to-Protect policy statement, and the 30-minute demo label from
   the rendered page.
@@ -141,15 +148,19 @@ directory.
 - The early-access form has one work-email field and one submit action.
 - The early-access copy asks the visitor to start with one agent or workload in
   Observe and review the suggested policy before Protect is enabled.
-- Demo actions use one `data-calcom` path. They move to the booking section until the Cal.com event URL is configured.
-- The access request includes product updates. The page has no second subscription form.
+- Demo actions use one `data-calcom` path. They move to the booking section until `VITE_CALCOM_EVENT_URL` is configured.
+- The access request sends a Resend notification to one configured inbox. It
+  does not create a subscription or contact record.
 - The page has dedicated product, protection, rollout, workload, incident, and FAQ sections.
 - Playwright selected the causal-replay product view. The workload view became hidden, and the causal-replay view became visible.
-- The browser accepted one valid work email and returned the inactive-endpoint status.
-- The production build contains the landing page only.
+- The server-side test rejected an invalid email address. It also confirmed
+  that a trimmed valid address becomes the reply address on a notification
+  to the fixed inbox.
+- The Vite output contains the landing page. Vercel builds the function from
+  `api/early-access.js` outside the Vite output.
 - A source scan found no public price or internal design instruction in the landing page.
 - The browser console reported no runtime error or warning on the landing page.
 
-The checks do not cover a deployed host, form delivery, a configured Cal.com
-event, a privacy policy,
+The checks do not cover deployed form delivery, a configured Cal.com event,
+deployed Analytics collection, a privacy policy,
 assistive-technology testing, or product API integration.

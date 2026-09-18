@@ -1,3 +1,7 @@
+import { inject } from '@vercel/analytics';
+
+inject({ mode: import.meta.env.PROD ? 'production' : 'development' });
+
 const navigationToggle = document.querySelector('.nav-toggle');
 const navigation = document.querySelector('.primary-navigation');
 
@@ -263,10 +267,10 @@ productTabs.forEach((tab, index) => {
 
 const accessForm = document.querySelector('.access-form');
 const formStatus = document.querySelector('.form-status');
-const calcomEventUrl = '';
+const calcomEventUrl = import.meta.env.VITE_CALCOM_EVENT_URL?.trim();
 
 if (accessForm && formStatus) {
-  accessForm.addEventListener('submit', (event) => {
+  accessForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     if (!accessForm.checkValidity()) {
@@ -275,7 +279,31 @@ if (accessForm && formStatus) {
       return;
     }
 
-    formStatus.textContent = 'The early-access form is not connected yet.';
+    const submitButton = accessForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    accessForm.setAttribute('aria-busy', 'true');
+    formStatus.textContent = 'Sending your request…';
+
+    try {
+      const formData = new FormData(accessForm);
+      const response = await fetch('/api/early-access', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: formData.get('email'),
+          website: formData.get('website'),
+        }),
+      });
+
+      if (!response.ok) throw new Error('The request could not be sent.');
+      accessForm.reset();
+      formStatus.textContent = 'Your request was sent. We will reply by email.';
+    } catch {
+      formStatus.textContent = 'Your request could not be sent. Please try again.';
+    } finally {
+      submitButton.disabled = false;
+      accessForm.removeAttribute('aria-busy');
+    }
   });
 }
 

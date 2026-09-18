@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check": "node --check script.js && vite build",
+    "check": "node --check script.js && node --test && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chenglou/pretext": "0.0.8"
+    "@chenglou/pretext": "0.0.8",
+    "@vercel/analytics": "^2.0.1"
   },
   "devDependencies": {
     "vite": "8.2.2"

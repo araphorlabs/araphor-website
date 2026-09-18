@@ -549,11 +549,15 @@
         <div class="request-actions">
           <form class="access-form" novalidate>
             <label for="access-email">Work email</label>
+            <div class="visually-hidden" aria-hidden="true">
+              <label for="access-website">Website</label>
+              <input id="access-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <div class="access-form-row">
               <input id="access-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
               <button type="submit">Request early access</button>
             </div>
-            <p class="form-status" aria-live="polite">Product updates are included. Unsubscribe at any time.</p>
+            <p class="form-status" aria-live="polite">We will reply to your work email.</p>
           </form>
 
           <div id="book-demo" class="demo-option">
